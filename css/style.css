@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Exo 2", sans-serif;
+    background: linear-gradient(to top left, rgb(17, 17, 17) 85%, #290E42 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+}
+
+
+.nav-home-page {
+    border-right: 1px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 380px;
+    height: 100vh;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.containes_nav{
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+
+.topo-nav{
+    flex: 1;  /* faz a área de conteúdo ocupar o espaço disponível do menu */
+    overflow-y: auto;  /* Ativa a rolagem só caso seja necessário no eixo Y */
+    overflow-x: hidden; /* Some com a aba de rolagem do eixo X */
+    padding: 0 20px;
+    scrollbar-width: none; /* Faz com que a funcionalidad de scrollar continue ativa na página, mas a barra de rolagem não fica visicel (serve para alguns navegares) */
+    -ms-overflow-style: none; /* Faz o mesmo que a anterior mas para outros navegadores */
+    padding-bottom: 100px;
+}
+
+.container_navegacoe{
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.container_espaco_reservado{
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.faq-ajuda{
+    padding-bottom: 20px;
+}
+
+.titulo-div-nav {
+    padding-bottom: 15px;
+}
+
+/* colocar nome de classes nesse elemento */
+a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+}
+
+/* colocar nome de classes nesse elemento */
+ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+
+}
+
+/* colocar nome de classes nesse elemento */
+li {
+    padding-left: 20px;
+}
+
+.missao-diaria {
+    border: 2px solid rgb(255, 106, 0);
+    width: 320px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Está servindo como container de teste para testar a funcionalidade do scroll */
+.barra-xp{
+    width: 320px;
+    height: 400px;
+    background-color: #4f0099;
+    border-radius: 20px;
+}
+
+/* está fixando o perfil no final do menu de navegação */
+.final-nav{
+    position: absolute;
+    bottom: 0px; /* distância do fundo */
+    background-color: rgb(17, 17, 17);
+    width: 380px;
+}
+
+.peril-usuario {
+    display: flex;
+    border-top: 1px solid white;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.foto-perfil{
+    border-radius: 50%;
+}
+
+.infos-perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
