@@ -115,6 +115,7 @@ li {
 }
 
 .foto-perfil{
+    border: 2px solid #00fff2;
     border-radius: 50%;
 }
 
