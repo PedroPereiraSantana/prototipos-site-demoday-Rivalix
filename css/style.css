@@ -7,21 +7,29 @@
 }
 
 body{
+    display: grid;
+    grid-template-columns: 20% 60% 20% ;
+    /* Ordenando e organizando as sessões da página com grid */
+    grid-template-areas: 
+    'aside header header'
+    'aside section section'
+    'aside foote footer';
     font-family: "Exo 2", sans-serif;
-    background: linear-gradient(to top left, rgb(17, 17, 17) 85%, #290E42 100%);
+    background: linear-gradient(to top left, rgb(15, 15, 15) 85%, #290E42 100%);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     color: rgb(255, 255, 255);
 }
 
 
-.nav-home-page {
-    border-right: 1px solid rgb(255, 255, 255);
+.aside-home-page {
+    grid-area: aside;
+    border-right: 1px solid rgb(153, 153, 153);
     display: flex;
     flex-direction: column;
     position: fixed;
-    width: 380px;
+    width: 100%;
     height: 100vh;
     justify-content: space-between;
     position: relative;
@@ -44,12 +52,23 @@ body{
     padding-bottom: 100px;
 }
 
+.container-logo {
+    width: 90%;
+    height: auto;
+}
+
+.logo-aside{
+    width: 100%;
+}
+
 .container_navegacoe{
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(153, 153, 153);
+    box-shadow: 0 2px 0 rgba(89, 0, 255, 0.7);
 }
 
 .container_espaco_reservado{
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(153, 153, 153);
+    box-shadow: 0 2px 0 rgba(89, 0, 255, 0.7);
 }
 
 .faq-ajuda{
@@ -60,41 +79,46 @@ body{
     padding-bottom: 15px;
 }
 
-/* colocar nome de classes nesse elemento */
-a{
+.containes_nav a{
     display: flex;
     align-items: center;
     gap: 15px;
     text-decoration: none;
     color: white;
     padding-bottom: 5px;
+    transition: all 0.1s;
 }
 
-/* colocar nome de classes nesse elemento */
-ul{
+.containes_nav a:hover{
+    color: rgba(255, 106, 0, 0.7);
+}
+
+.containes_nav ul{
     display: flex;
     list-style: none;
     flex-direction: column;
 
 }
 
-/* colocar nome de classes nesse elemento */
-li {
+.containes_nav li {
     padding-left: 20px;
 }
 
 .missao-diaria {
-    border: 2px solid rgb(255, 106, 0);
-    width: 320px;
+    border: 2px solid rgb(89, 0, 255 );
+    box-shadow: 0 0 10px rgb(89, 0, 255 );
+    width: 90%;
     border-radius: 10px;
     padding: 10px;
+    
 }
 
 /* Está servindo como container de teste para testar a funcionalidade do scroll */
 .barra-xp{
-    width: 320px;
-    height: 400px;
-    background-color: #4f0099;
+    width: 100%;
+    height: 10px;
+    margin-top: 10px;
+    background: linear-gradient(to right, rgba(255, 106, 0, 0.7) 80%, rgb(189, 189, 189) 30%);
     border-radius: 20px;
 }
 
@@ -103,19 +127,18 @@ li {
     position: absolute;
     bottom: 0px; /* distância do fundo */
     background-color: rgb(17, 17, 17);
-    width: 380px;
+    width: 100%;
 }
 
-.peril-usuario {
+.container-peril-usuario {
     display: flex;
-    border-top: 1px solid white;
+    border-top: 1px solid rgb(153, 153, 153);
     justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px 20px;
 }
 
 .foto-perfil{
-    border: 2px solid #00fff2;
+    border: 2px solid rgba(89, 0, 255, 0.7);
     border-radius: 50%;
 }
 
@@ -124,3 +147,83 @@ li {
     align-items: center;
     gap: 10px;
 }
+
+
+
+/* Começo do header */
+
+.header-pagina-home{
+    grid-area: header;
+    border-bottom: 1px solid white;
+    display: flex;
+    width: 100%;
+    height: 140px;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.search-header-home {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+
+}
+
+.input-header-home{
+    background-color: rgba(17, 17, 17, 0.2);
+    width: 80%;
+    height: 40px;
+    padding-left: 20px;
+    border-color: #acacac;
+    border-radius: 20px;
+    color: white;
+    box-shadow: none;
+    border: none;
+    outline: 1px solid rgb(51, 51, 51);
+    transition: box-shadow 0.2s ease;
+}
+
+.input-header-home::placeholder{
+    font-size: 16px;
+}
+
+.input-header-home:hover {
+    box-shadow: 0 0 15px rgb(89, 0, 255);
+}
+
+.input-header-home:focus {
+    background-color: transparent;
+    font-size: 16px;
+    color: #acacac;
+    outline: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px 10px rgba(89, 0, 255, 1);
+
+}
+
+.icons-header-div{
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    align-items: center;
+}
+
+.icons-header-div p{
+    margin-left: -30px;
+}
+
+.icons-header-div a{
+    padding: 10px;
+    border-radius: 50%;
+    border: 4px solid rgb(150, 150, 150);
+    transition: border 0.1s ease;
+    transition: box-shadow 0.1s ease;
+}
+
+.icons-header-div a:hover{
+    background: rgb(24, 24, 24);
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 10px 8px rgba(89, 0, 255, 0.7);
+
+}
+

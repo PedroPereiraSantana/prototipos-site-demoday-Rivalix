@@ -8,17 +8,18 @@
     <meta name="keywords" content="Fight Games">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo-favicon.png" type="image/x-icon">
 
     <title>Rivalix</title>
 </head>
 <body>
-    <nav class="nav-home-page">
+    <aside class="aside-home-page">
 
         <!-- O que vai ficar fixo mair para o topo da página -->
         <div class="topo-nav">
 
-            <div class="containes_nav container_logo">
-                <img src="img/logo-rivalix-branco.png" alt="A logo da Rivalix que tem uma letra R com um detalhe laranja no inicio da letra, a palavra Rivalix logo depois e logo embaixo a palavra gaming" width="400px" height="auto">
+            <div class="containes_nav container-logo">
+                <img class="logo-aside" src="img/logo-rivalix-nova3.png" alt="A logo da Rivalix que tem uma letra R com um detalhe laranja no inicio da letra, a palavra Rivalix logo depois e logo embaixo a palavra gaming" width="350px" height="auto">
             </div>
 
             <div class="containes_nav container_navegacoe">
@@ -78,7 +79,7 @@
                         </a> 
                     </li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             <i><img src="img/mingcute--notification-fill.svg" alt=""></i>Notificações
                         </a>
                     </li>
@@ -121,7 +122,7 @@
         <div class="final-nav">
 
             <!-- aba de perfil -->
-            <div class="containes_nav peril-usuario">
+            <div class="containes_nav container-peril-usuario">
                 <div class="infos-perfil">
                     <div>
                         <img class="foto-perfil" src="img/suco-de-fruta.png" alt="" width="70px" height="auto">
@@ -140,7 +141,28 @@
             </div>
         </div>
 
-    </nav>
-</body>
+    </aside>
+
+
+    <!-- inicio do header que tem a o input e pesquisa, o presente de missão diária e o saldo do usuário -->
+    <header class="header-pagina-home">
+
+        <search class="search-header-home">
+            <input class="input-header-home" placeholder="Pesquisar..." type="text">
+        </search>
+
+        <div class="icons-header-div">
+            <a href="#">
+                <i><img src="img/mdi--gift-outline.svg" width="24px" height="auto" alt=""></i>
+            </a>
+            <a href="#">
+                <i><img src="img/jam--coin.svg" width="24px" height="auto"></i>
+            </a> 
+            
+            <p>R$ 10,00</p>
+        </div>
+
+    </header> 
+</body> 
 </html>
 
