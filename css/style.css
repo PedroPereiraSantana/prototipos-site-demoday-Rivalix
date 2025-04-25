@@ -294,6 +294,8 @@ body{
   }
   
   .slide h2{
+    display: flex;
+    justify-content: start;
     width: 60%;
   }
 
