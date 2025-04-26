@@ -13,9 +13,10 @@ body{
     grid-template-areas: 
     'aside header header'
     'aside section section'
-    'aside foote footer';
+    'aside section2 section2'
+    'aside footer footer';
     font-family: "Exo 2", sans-serif;
-    background: linear-gradient(to top left, rgb(15, 15, 15) 85%, #290E42 100%);
+    background: rgb(3, 3, 3);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -25,14 +26,14 @@ body{
 
 .aside-home-page {
     grid-area: aside;
-    border-right: 1px solid rgb(153, 153, 153);
-    display: flex;
-    flex-direction: column;
+    border-right: 1px solid white;
     position: fixed;
-    width: 100%;
-    height: 100vh;
-    justify-content: space-between;
-    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh; /* ocupa toda a altura da janela */
+    background: rgb(3, 3, 3);
+    color: white;
+    padding: 1rem;
 
 }
 
@@ -125,8 +126,10 @@ body{
 /* está fixando o perfil no final do menu de navegação */
 .final-nav{
     position: absolute;
+    left: 0;
+    top: 88%;
     bottom: 0px; /* distância do fundo */
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(3, 3, 3);
     width: 100%;
 }
 
@@ -234,7 +237,6 @@ body{
 }
 
 
-
 /* Primeira section */
 
 .fist-section{
@@ -256,26 +258,37 @@ body{
 
 .main-carrossel img{
     position: absolute;
-    top: 30px; /* ajusta para "encostar" ou sobrepor a div */
-    right: 30px;
-    width: 30%;
-    height: 350px;
+    top: 5px; /* ajusta para "encostar" ou sobrepor a div */
+    right: 10px;
+    width: 38%;
+    height: 380px;
     z-index: 10; /* garante que fique por cima */
 }
 
 .carrossel {
-    width: 70%;
+    width: 80%;
     height: 300px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    background: #A020F0;
   }
 
   .slides {
     display: flex;
     width: 200%; 
     animation: deslizar 15s infinite;
+  }
+
+  .slide:nth-child(1) {
+    background: rgba(51, 0, 146, 0.7);
+  }
+
+  .slide:nth-child(2) {
+    background: rgba(30, 0, 87, 0.7);
+  }
+
+  .slide:nth-child(3) {
+    background: rgba(69, 0, 197, 0.7);
   }
 
   .slide {
@@ -295,8 +308,8 @@ body{
   
   .slide h2{
     display: flex;
-    justify-content: start;
     width: 60%;
+    text-align: start;
   }
 
 
@@ -397,3 +410,213 @@ body{
     background: #ff6600;
 }
 
+/* Comaça aqui a parte dos cards */
+
+.second-section{
+    grid-area: section2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+}
+
+.main-second-section{
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div-criar-torneio {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.div-criar-torneio h2{
+    font-size: 40px;
+}
+
+.div-criar-torneio button {
+    width: 10%;
+    background: transparent;
+    color: inherit;
+    border: 2px solid;
+    border-color: #ff6600;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.div-criar-torneio button:hover{
+    background: #ff6600;
+    color: white;
+}
+
+.cards-torneios {
+    width: 88%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-torneio{
+    width: 27%;
+    height: 500px;
+    border-radius: 20px;
+    background-color: rgb(3, 3, 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 20px;
+    border: 1px solid rgb(78, 78, 78);
+    transition: 0.3s;
+}
+
+.card-torneio:hover{
+    box-shadow:-5px 0 10px rgb(89, 0, 255 ), 5px 0 10px rgb(89, 0, 255 );
+    border: 1px solid white;
+
+}
+
+
+.card-imagem{
+    border-radius: 10px;
+    width: 90%;
+    background-color: rgb(134, 134, 134);
+    height: 250px;
+}
+
+.card-imagem img{
+    border-radius: 10px;
+    width: 100%;
+    height: 250px;
+}
+
+.card-informacoes{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-imagem.loading::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #aaaaaa 0%, #cccccc 50%, #aaaaaa 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+    z-index: 1;
+  }
+  
+  .card-imagem {
+    position: relative; /* necessário para o ::before funcionar */
+    overflow: hidden;
+  }
+  
+  .card-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+
+  .footer {
+    grid-area: footer;
+
+    background: #000000;
+    padding: 2rem 4rem;
+    font-family: 'Arial', sans-serif;
+    box-shadow:
+      0 0 10px rgb(89, 0, 255 ),
+      0 0 20px rgb(89, 0, 255 ),
+      0 0 40px rgb(89, 0, 255 );
+    border-top: 2px solid rgb(255, 255, 255);
+  }
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    position: relative;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #B086CC;
+    gap: 2rem;
+}
+
+.footer-logo img {
+    width: 160px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo span {
+    color: #ff6600;
+}
+
+.social-icons a img {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    transition: transform 0.2s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-links ul, .footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li, .footer-contact li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .footer-policy a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    padding-top: 1.5rem;
+    color: #333;
+}
+
+.footer-policy {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
