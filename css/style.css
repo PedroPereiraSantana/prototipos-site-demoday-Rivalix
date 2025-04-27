@@ -54,7 +54,7 @@ body{
 }
 
 .container-logo {
-    width: 90%;
+    width: 70%;
     height: auto;
 }
 
@@ -62,7 +62,7 @@ body{
     width: 100%;
 }
 
-.container_navegacoe{
+.container_navegacoes{
     border-bottom: 1px solid rgb(153, 153, 153);
     box-shadow: 0 2px 0 rgba(89, 0, 255, 0.7);
 }
@@ -91,7 +91,7 @@ body{
 }
 
 .containes_nav a:hover{
-    color: rgba(255, 106, 0, 0.7);
+    color: #ff6600;
 }
 
 .containes_nav ul{
@@ -106,8 +106,8 @@ body{
 }
 
 .missao-diaria {
-    border: 2px solid rgb(89, 0, 255 );
-    box-shadow: 0 0 10px rgb(89, 0, 255 );
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow:-5px 0 10px rgb(89, 0, 255 ), 5px 0 10px rgb(89, 0, 255 );
     width: 90%;
     border-radius: 10px;
     padding: 10px;
@@ -152,11 +152,14 @@ body{
 }
 
 
-
 /* Começo do header */
 
 .header-pagina-home{
     grid-area: header;
+    box-shadow:
+    0 0 10px rgb(89, 0, 255 ),
+    0 0 20px rgb(89, 0, 255 ),
+    0 0 40px rgb(89, 0, 255 );
     border-bottom: 1px solid white;
     display: flex;
     width: 100%;
