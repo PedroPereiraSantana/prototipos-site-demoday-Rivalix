@@ -16,7 +16,7 @@ body{
     'aside section2 section2'
     'aside footer footer';
     font-family: "Exo 2", sans-serif;
-    background: #080808;
+    background: #131313;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -32,7 +32,7 @@ body{
     top: 0;
     left: 0;
     height: 100vh; /* ocupa toda a altura da janela */
-    background: #080808;
+    background: #131313;
     color: white;
 }
 
@@ -128,7 +128,7 @@ body{
     left: 0;
     top: 88%;
     bottom: 0px; /* distância do fundo */
-    background: #080808;
+
     width: 100%;
 }
 
@@ -469,7 +469,7 @@ body{
     width: 27%;
     height: 500px;
     border-radius: 20px;
-    background-color: rgb(3, 3, 3);
+    background: #131313;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -544,7 +544,7 @@ body{
   .footer {
     grid-area: footer;
 
-    background: #000000;
+    background: #131313;
     padding: 2rem 4rem;
     font-family: 'Arial', sans-serif;
     box-shadow:
